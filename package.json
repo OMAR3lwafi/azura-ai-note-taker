@@ -1,0 +1,56 @@
+{
+  "name": "azura-ai-note-taker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual AI-powered meeting assistant with real-time transcription",
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd Frontend && npm run lint",
+    "lint:backend": "deno task lint",
+    "format": "npm run format:frontend && npm run format:backend",
+    "format:frontend": "cd Frontend && npm run format",
+    "format:backend": "deno task format",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd Frontend && npm test",
+    "test:backend": "cd supabase/functions && deno test --allow-all"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/azura-ai-note-taker.git"
+  },
+  "keywords": [
+    "meeting",
+    "transcription",
+    "ai",
+    "arabic",
+    "english",
+    "supabase",
+    "react",
+    "realtime"
+  ],
+  "author": "Omar",
+  "license": "MIT"
+}

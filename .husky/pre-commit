@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run linting for frontend
+cd Frontend && npm run lint --if-present
+
+# Run Deno linting for backend
+deno task lint
+
+# Check for secrets
+if command -v gitleaks &> /dev/null; then
+  gitleaks protect --staged --verbose
+fi

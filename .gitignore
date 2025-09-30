@@ -1,0 +1,6 @@
+# Local env
+.env.local
+.supabase/*
+node_modules
+.env
+README.mdPRPs-agentic-eng/
